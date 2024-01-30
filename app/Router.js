@@ -6,8 +6,7 @@ import { navigationRef } from './helpers/root-navigation';
 
 // import all screens
 import main from './screens/main';
-import pageOne from './screens/pageOne';
-import pageTwo from './screens/pageTwo';
+import signin from './screens/authentication/signin';
 
 const Stack = createStackNavigator()
 const horizontalAnimation = {
@@ -34,8 +33,7 @@ export default App =({ initialRoute })=>{
 	<NavigationContainer ref={navigationRef}>
 		<Stack.Navigator initialRouteName={initialRoute} screenOptions={horizontalAnimation}>
 			<Stack.Screen name="Main" component={main} />
-			<Stack.Screen name="PageOne" component={pageOne} />
-			<Stack.Screen name="PageTwo" component={pageTwo} />
+			<Stack.Screen name="Signin" component={signin} />
 		</Stack.Navigator>
 	</NavigationContainer>
 	)

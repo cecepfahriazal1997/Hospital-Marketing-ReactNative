@@ -14,7 +14,7 @@ export default function App(props) {
 
 	const prepare	= async()=>{
     await new Promise(resolve => setTimeout(resolve, 2000));
-    setInitialRoute("PageOne");
+    setInitialRoute("Signin");
     // const token 	= await AsyncStorage.getItem('@token')
     // if (token !== null) {
         // setInitialRoute("PageOne");
@@ -26,8 +26,8 @@ export default function App(props) {
 			await Font.loadAsync({
 				// font
 				'poppins-extra-bold': require('./assets/fonts/poppins-extra-bold.ttf'),
-				'poppins-regular': require('./assets/fonts/poppins-regular.ttf'),
 				'poppins-thin': require('./assets/fonts/poppins-thin.ttf'),
+				'poppins': require('./assets/fonts/poppins-regular.ttf'),
 			})	
 
 			if (Constants.appOwnership!="expo"){

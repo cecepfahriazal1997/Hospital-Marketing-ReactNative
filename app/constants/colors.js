@@ -7,5 +7,8 @@ export default {
     success: '#379237',
     light: '#FBF9F1',
     white: '#FFFFFF',
-    black: '#000000'
+    black: '#000000',
+    grayLight: '#F0F0F0',
+    grayLightLevel2: '#e3e3e3',
+    gray: '#7F8487'
 }

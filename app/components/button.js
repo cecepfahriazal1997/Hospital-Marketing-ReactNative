@@ -4,32 +4,32 @@ import { Ionicons } from '@expo/vector-icons';
 import colors from './../constants/colors';
 import { Label } from './label';
 
-export const Button	= ({text, textColor, color, onPress, icon=null, iconSize=25, disabled=false})=>{
+export const Button	= ({text, textColor, color, onPress, icon=null, iconSize=25, iconColor='white', disabled=false, borderRadius=10, style})=>{
 	return <View style={{ }}>
-		<TouchableOpacity onPress={onPress} disabled={disabled}>
+		<TouchableOpacity onPress={onPress} disabled={disabled} activeOpacity={0.6}>
 			<View 
 				style={{ 
-					borderRadius: 32,
-					paddingVertical: 18,
-					paddingHorizontal: 30,
+					borderRadius: borderRadius,
 					backgroundColor: colors[color],
 					flexDirection: 'row',
-					justifyContent: 'center'
+					justifyContent: 'center',
+					alignItems: 'center',
+					padding: 10,
+					...style
 				}}>
 					{
 						icon && 
 						<Ionicons
-							color={colors[color]}
+							color={colors[iconColor]}
 							size={iconSize}
 							name={icon}/>
 					}
 				<Label
 					align='center'
-					// font='manrope'
+					font='poppins'
 					color={textColor}
-					size={20}
-					text={text}
-					mBottom={0}/>
+					size={18}
+					text={text}/>
 			</View>
 		</TouchableOpacity>
 	</View>

@@ -2,17 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Text } from 'react-native';
 import colors from './../constants/colors';
 
-export const Label = ({font=false, medium=false, text, size=14, color="black_1", mTop=0, mBottom=4, align="auto", mLeft=0})=>{
+export const Label = ({text, size=14, color="black", fontFamily="poppins", fontWeight="normal", style={}})=>{
     return (
         <Text style={{
             fontSize: size,
-            // fontFamily: font?font:medium?"medium":"regular",
-            fontWeight: medium?"500":"normal",
+            fontFamily: fontFamily,
+            fontWeight: fontWeight,
             color: colors[color],
-            marginBottom:mBottom,
-            marginTop:mTop,
-            textAlign:align,
-            marginLeft:mLeft,
+            ...style
         }}>{text}</Text> 
     )
 }
