@@ -42,11 +42,11 @@ const Home = ({navigation}) => {
       borderWidth: 0.5,
       borderColor: colors.grayLight,
       padding: 8,
-      elevation: 1,
+      elevation: 3,
       shadowColor: 'rgba(0,0,0, .4)', // IOS
-      shadowOffset: { height: 1, width: 1 }, // IOS
-      shadowOpacity: 0.5, // IOS
-      shadowRadius: 1, //IOS
+      shadowOffset: { height: 2, width: 2 }, // IOS
+      shadowOpacity: 0.1, // IOS
+      shadowRadius: 2, //IOS
     }
   });
   
@@ -81,7 +81,6 @@ const Home = ({navigation}) => {
 
   return (
 		<Container safe background="grayLightLevel1">
-        <StatusBar hidden={false} backgroundColor={colors.primary} barStyle="light-content" />
       <FlatList
         nestedScrollEnabled={true}
         data={menuItem}

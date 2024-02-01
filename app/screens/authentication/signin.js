@@ -7,7 +7,7 @@ import colors from '../../constants/colors';
 export default function Signin({navigation}) {
   return (
 		<Container safe background="white">
-        <StatusBar hidden={false} backgroundColor={colors.primary} barStyle="light-content" />
+      <StatusBar barStyle="dark-content" hidden={false} backgroundColor='transparent' />
       <ScrollView>
         <View style={{padding: 30, flex: 1, justifyContent: 'center'}}>
           <Label text='Selamat Datang Kembali' size={20} style={{marginTop: 100}}></Label>

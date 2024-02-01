@@ -10,7 +10,7 @@ export const Container = ({ children, safe, background="light" })=>{
             style={ { flex: 1, backgroundColor:colors[background] } } >
             {
                 safe ?
-                <SafeAreaView style={{ flex: 1 }}>{children}</SafeAreaView>:
+                <SafeAreaView style={{ flex: 1 }} forceInset = {{top: "always", bottom: "never"}}>{children}</SafeAreaView>:
                 children
             }
         </KeyboardAvoidingView>

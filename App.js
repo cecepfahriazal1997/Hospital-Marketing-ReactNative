@@ -4,10 +4,13 @@ import * as Updates from 'expo-updates'
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 import Constants from 'expo-constants';
+import { Animated } from "react-native";
 
 import Router from './app/Router';
 
 export default function App(props) {
+	const av = new Animated.Value(0);
+	av.addListener(() => {return});
 
 	const [ isLoadingComplete, setLoadingComplete ]	= useState(false);
 	const [ initialRoute, setInitialRoute ]			= useState("Main");

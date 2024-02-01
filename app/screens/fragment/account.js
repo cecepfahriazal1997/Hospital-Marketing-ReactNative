@@ -75,7 +75,6 @@ const headerMenu = () => (
 const Account = ({navigation}) => {
   return (
 		<Container safe background="grayLightLevel1">
-        <StatusBar hidden={false} backgroundColor={colors.primary} barStyle="light-content" />
       <FlatList
         nestedScrollEnabled={true}
         data={menuItem}
