@@ -6,4 +6,5 @@ export default {
     menu_4: require('../../assets/images/menu/menu-4.png'),
     menu_5: require('../../assets/images/menu/menu-5.png'),
     menu_6: require('../../assets/images/menu/menu-6.png'),
+    doctor: require('../../assets/images/doctor.png'),
 }

@@ -1,8 +1,10 @@
 import { View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
+import { colors } from '../constants';
 
 import Home from './fragment/home';
+import Account from './fragment/account';
 
 const Tab = createBottomTabNavigator();
 
@@ -31,13 +33,13 @@ const Dashboard = ({navigation}) => {
     <Tab.Navigator screenOptions={styles}>
       <Tab.Screen name="Home" component={Home} options={{
           tabBarIcon: ({ color, size, focused }) => (
-            <View style={{ backgroundColor: (focused ? 'rgba(7, 102, 173, 0.2)' : '#fff'), paddingHorizontal: 10, paddingVertical: 5, borderRadius: 10 }}>
+            <View style={{ backgroundColor: (focused ? colors.primaryTransparent : colors.white), paddingHorizontal: 10, paddingVertical: 5, borderRadius: 10 }}>
               <Ionicons name={focused ? 'home' : 'home-outline'} color={color} size={size} />
             </View>
           )}}/>
-      <Tab.Screen name="Account" component={Home} options={{
+      <Tab.Screen name="Account" component={Account} options={{
           tabBarIcon: ({ color, size, focused }) => (
-            <View style={{ backgroundColor: (focused ? 'rgba(7, 102, 173, 0.2)' : '#fff'), paddingHorizontal: 10, paddingVertical: 5, borderRadius: 10 }}>
+            <View style={{ backgroundColor: (focused ? colors.primaryTransparent : colors.white), paddingHorizontal: 10, paddingVertical: 5, borderRadius: 10 }}>
               <Ionicons name={focused ? 'person' : 'person-outline'} color={color} size={size} />
             </View>
           )}}/>
