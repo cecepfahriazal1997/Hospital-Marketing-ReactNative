@@ -55,7 +55,7 @@ const elementItem = ({ item }) => (
         <Image source={item.icon} style={styles.image} />
     </View>
     <View style={{ flex: 2, justifyContent: 'center' }}>
-      <Label text={ item.title } size={14} fontFamily='poppins-extra-bold'></Label>
+      <Label text={ item.title } size={14}></Label>
     </View>
   </TouchableOpacity>
 );
