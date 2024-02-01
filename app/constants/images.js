@@ -7,4 +7,7 @@ export default {
     menu_5: require('../../assets/images/menu/menu-5.png'),
     menu_6: require('../../assets/images/menu/menu-6.png'),
     doctor: require('../../assets/images/doctor.png'),
+    icon_doctor: require('../../assets/images/icons/icon-doctor.png'),
+    icon_hospital: require('../../assets/images/icons/icon-hospital.png'),
+    icon_patient: require('../../assets/images/icons/icon-patient.png'),
 }

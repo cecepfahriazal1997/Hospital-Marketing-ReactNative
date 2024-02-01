@@ -7,10 +7,10 @@ import { navigationRef } from './helpers/root-navigation';
 // import all screens
 import signin from './screens/authentication/signin';
 import dashboard from "./screens/dashboard";
+import menuMasterData from "./screens/master-data/menu";
 
 const Stack = createStackNavigator()
 const horizontalAnimation = {
-	headerShown: false,
 	gestureDirection: 'horizontal',
 	cardStyleInterpolator: ({ current, layouts }) => {
 		return {
@@ -32,8 +32,9 @@ export default App =({ initialRoute })=>{
 	return (
 	<NavigationContainer ref={navigationRef}>
 		<Stack.Navigator initialRouteName={initialRoute} screenOptions={horizontalAnimation}>
-			<Stack.Screen name="Signin" component={signin} />
-			<Stack.Screen name="Dashboard" component={dashboard} />
+			<Stack.Screen name="Signin" component={signin} options={{ headerShown: false }} />
+			<Stack.Screen name="Dashboard" component={dashboard} options={{ headerShown: false }} />
+			<Stack.Screen name="MasterData" component={menuMasterData} options={{ headerShown: true, title: 'Master Data' }} />
 		</Stack.Navigator>
 	</NavigationContainer>
 	)

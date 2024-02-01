@@ -1,4 +1,5 @@
 import { View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import { colors } from '../constants';
@@ -8,7 +9,7 @@ import Account from './fragment/account';
 
 const Tab = createBottomTabNavigator();
 
-const styles = {
+const screenOptions = {
   tabBarStyle: {
     height: 80,
     borderTopLeftRadius: 20,
@@ -19,6 +20,7 @@ const styles = {
   },
   tabBarItemStyle: {
     margin: 10,
+    width:'auto'
   },
   tabBarLabelStyle: {
     fontSize: 12,
@@ -30,20 +32,22 @@ const styles = {
 
 const Dashboard = ({navigation}) => {
   return (
-    <Tab.Navigator screenOptions={styles}>
-      <Tab.Screen name="Home" component={Home} options={{
-          tabBarIcon: ({ color, size, focused }) => (
-            <View style={{ backgroundColor: (focused ? colors.primaryTransparent : colors.white), paddingHorizontal: 10, paddingVertical: 5, borderRadius: 10 }}>
-              <Ionicons name={focused ? 'home' : 'home-outline'} color={color} size={size} />
-            </View>
-          )}}/>
-      <Tab.Screen name="Account" component={Account} options={{
-          tabBarIcon: ({ color, size, focused }) => (
-            <View style={{ backgroundColor: (focused ? colors.primaryTransparent : colors.white), paddingHorizontal: 10, paddingVertical: 5, borderRadius: 10 }}>
-              <Ionicons name={focused ? 'person' : 'person-outline'} color={color} size={size} />
-            </View>
-          )}}/>
-    </Tab.Navigator>
+		// <NavigationContainer independent={true}>
+      <Tab.Navigator screenOptions={screenOptions}>
+        <Tab.Screen name="Home" component={Home} options={{
+            tabBarIcon: ({ color, size, focused }) => (
+              <View style={{ backgroundColor: (focused ? colors.primaryTransparent : colors.white), paddingHorizontal: 10, paddingVertical: 5, borderRadius: 10 }}>
+                <Ionicons name={focused ? 'home' : 'home-outline'} color={color} size={size} />
+              </View>
+            )}}/>
+        <Tab.Screen name="Account" component={Account} options={{
+            tabBarIcon: ({ color, size, focused }) => (
+              <View style={{ backgroundColor: (focused ? colors.primaryTransparent : colors.white), paddingHorizontal: 10, paddingVertical: 5, borderRadius: 10 }}>
+                <Ionicons name={focused ? 'person' : 'person-outline'} color={color} size={size} />
+              </View>
+            )}}/>
+      </Tab.Navigator>
+    // </NavigationContainer>
   );
 }
 
