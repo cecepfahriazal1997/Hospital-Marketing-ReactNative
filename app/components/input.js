@@ -16,8 +16,7 @@ export const Input	= ({title, placeholder, onChange, secureTextEntry=false, marg
 		<View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', paddingHorizontal: 10, borderWidth: 1, borderColor: colors.grayLight, borderRadius: 10, marginBottom: marginBottom, backgroundColor: colors[backgroundColor] }}>
 			{
 			styleIcon.name && 
-			<Ionicons
-				{...{styleIcon}} />
+			<Ionicons name={styleIcon.name} color={styleIcon.color} size={styleIcon.size} style={{ alignSelf: 'center' }} />
 			}
 			<TextInput
 				placeholderTextColor={colors.gray}

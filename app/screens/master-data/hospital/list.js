@@ -1,5 +1,6 @@
 import { View, StatusBar, Image, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
-import { Container, Input } from '../../../components';
+import { Ionicons } from '@expo/vector-icons';
+import { Button, Container, Input } from '../../../components';
 import { colors, images } from '../../../constants';
 import { Label } from '../../../components/label';
 
@@ -7,7 +8,7 @@ const menuItem = [
   {
     title: 'RS. Abadi Cahya',
     image: images.icon_hospital,
-    address: 'RS. Abadi Cahya'
+    address: 'Jln. Cihanjuang Blok F. 17'
   },
   {
     title: 'RS. Harapan',
@@ -17,7 +18,7 @@ const menuItem = [
   {
     title: 'RS. Sejahtera',
     image: images.icon_hospital,
-    descriaddressption: 'Jln. Cisauk No.09, Tangerang'
+    address: 'Jln. Cisauk No.09, Tangerang'
   }
 ];
 
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
     shadowOffset: { height: 1, width: 1 }, // IOS
     shadowOpacity: 0.1, // IOS
     shadowRadius: 2, //IOS
-    gap: 10
+    gap: 15
   },
   image: {
     width: 50,
@@ -51,18 +52,23 @@ const styles = StyleSheet.create({
 
 const elementItem = ({ item }) => (
   <TouchableOpacity activeOpacity={0.8} onPress={() => {}} style={{ ...styles.button }}>
-    <View style={{ flex: 0.5, alignItems: 'center', justifyContent: 'center'}}>
+    <View style={{ alignItems: 'center', justifyContent: 'center'}}>
         <Image source={item.image} style={styles.image} />
     </View>
-    <View style={{ flex: 2, justifyContent: 'center' }}>
+    <View style={{ justifyContent: 'center' }}>
       <Label text={ item.title } size={14}></Label>
+      <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5, marginTop: 5 }}>
+        <Ionicons name='location-outline' color={colors.gray} size={20} style={{ alignSelf: 'center' }} />
+        <Label text={ item.address } size={14} color='gray'></Label>
+      </View>
     </View>
   </TouchableOpacity>
 );
 
 const headerItem = () => (
-  <View style={{ flex: 1}}>
-    <Input placeholder='Cari Rumah Sakit' styleIcon={{ name: 'person' }} backgroundColor="grayLightLevel2"></Input>
+  <View style={{ flexDirection:'row', flex: 1, gap: 10}}>
+    <Input placeholder='Cari Rumah Sakit' styleIcon={{ name: 'search', color: colors.gray, size: 16 }} backgroundColor="grayLightLevel2"></Input>
+    <Button icon='list-outline' color='grayLightLevel2' iconColor='gray' style={{ height: 50}} />
   </View>
 )
 
