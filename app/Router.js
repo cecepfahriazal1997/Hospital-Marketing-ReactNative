@@ -7,7 +7,7 @@ import { navigationRef } from './helpers/root-navigation';
 // import all screens
 import main from './screens/main';
 import signin from './screens/authentication/signin';
-import home from "./screens/dashboard/home";
+import dashboard from "./screens/dashboard";
 
 const Stack = createStackNavigator()
 const horizontalAnimation = {
@@ -35,7 +35,7 @@ export default App =({ initialRoute })=>{
 		<Stack.Navigator initialRouteName={initialRoute} screenOptions={horizontalAnimation}>
 			<Stack.Screen name="Main" component={main} />
 			<Stack.Screen name="Signin" component={signin} />
-			<Stack.Screen name="Home" component={home} />
+			<Stack.Screen name="Dashboard" component={dashboard} />
 		</Stack.Navigator>
 	</NavigationContainer>
 	)

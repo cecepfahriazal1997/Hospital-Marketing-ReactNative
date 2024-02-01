@@ -21,7 +21,7 @@ export default function Signin({navigation}) {
               color="primary"
               textColor="white"
               text="Masuk ke Aplikasi"
-              onPress={()=>navigation.navigate('Home')}/>
+              onPress={()=>navigation.navigate('Dashboard')}/>
           </View>
           <View style={{flexDirection: 'row', marginHorizontal: 48, marginTop: 20}}>
               <View style={{backgroundColor: colors.grayLightLevel2, height: 1, flex: 1, alignSelf: 'center'}} />
@@ -35,21 +35,21 @@ export default function Signin({navigation}) {
               borderRadius={100}
               icon='logo-apple'
               style={{ width: 50 , height : 50, borderWidth: 1, borderColor: colors.grayLight }}
-              onPress={()=>navigation.navigate('Home')}/>
+              onPress={()=>navigation.navigate('Dashboard')}/>
             <Button
               color="white"
               iconColor="danger"
               borderRadius={100}
               icon='logo-google'
               style={{ width: 50 , height : 50, borderWidth: 1, borderColor: colors.grayLight }}
-              onPress={()=>navigation.navigate('Home')}/>
+              onPress={()=>navigation.navigate('Dashboard')}/>
             <Button
               color="white"
               iconColor="primary"
               borderRadius={100}
               icon='logo-facebook'
               style={{ width: 50 , height : 50, borderWidth: 1, borderColor: colors.grayLight }}
-              onPress={()=>navigation.navigate('Home')}/>
+              onPress={()=>navigation.navigate('Dashboard')}/>
           </View>
         </View>
       </ScrollView>

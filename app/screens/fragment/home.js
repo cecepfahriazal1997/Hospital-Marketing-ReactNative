@@ -1,4 +1,4 @@
-import { ScrollView, View, StatusBar, Image, FlatList, TouchableOpacity } from 'react-native';
+import { View, StatusBar, Image, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import { Container, Button } from '../../components';
 import { colors, images } from '../../constants';
 import { Label } from '../../components/label';
@@ -31,8 +31,26 @@ const menuItem = [
   }
 ];
 
+const styles = StyleSheet.create({
+  button: {
+    margin: 4,
+    flex:1,
+    alignItems: 'center',
+    backgroundColor: colors.white,
+    borderRadius: 10,
+    borderWidth: 0.5,
+    borderColor: colors.grayLight,
+    padding: 8,
+    elevation: 1,
+    shadowColor: 'rgba(0,0,0, .4)', // IOS
+    shadowOffset: { height: 1, width: 1 }, // IOS
+    shadowOpacity: 0.5, // IOS
+    shadowRadius: 1, //IOS
+  }
+});
+
 const elementMenu = ({ item }) => (
-  <TouchableOpacity onPress={() => {}} style={{ margin: 4, flex:1, alignItems: 'center', backgroundColor: colors.white, borderRadius: 10, borderWidth: 1, borderColor: colors.grayLight, padding: 8}}>
+  <TouchableOpacity onPress={() => {}} style={{ ...styles.button }}>
     <Image
       style={{ width: 70, height: 70, resizeMode: 'center' }}
       source={ item.image }
@@ -62,7 +80,7 @@ const headerMenu = () => (
 
 const Home = ({navigation}) => {
   return (
-		<Container safe background="white">
+		<Container safe background="grayLightLevel1">
         <StatusBar hidden={false} backgroundColor={colors.primary} barStyle="light-content" />
       <FlatList
         nestedScrollEnabled={true}
@@ -71,6 +89,7 @@ const Home = ({navigation}) => {
         keyExtractor={(item) => item.title}
         numColumns={3}
         contentContainerStyle={{ marginTop: 30, marginHorizontal:20 }}
+        ListHeaderComponentStyle={{ marginBottom: 30}}
         ListHeaderComponent={headerMenu}
         />
     </Container>
