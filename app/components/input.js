@@ -5,7 +5,7 @@ import colors from './../constants/colors';
 import { Label } from './label';
 import { Ionicons } from '@expo/vector-icons';
 
-export const Input	= ({title, placeholder, onChange, secureTextEntry=false, marginBottom=0, styleIcon={ iconLeft:null, iconColor: 'black', iconSize: 25 }})=>{
+export const Input	= ({title, placeholder, onChange, secureTextEntry=false, marginBottom=0, backgroundColor='grayLightLevel1', fontSize=14, styleIcon={ name:null, color: 'black', size: 25 }})=>{
 	return <>
         {title && (<Label
 			size={14}
@@ -13,11 +13,11 @@ export const Input	= ({title, placeholder, onChange, secureTextEntry=false, marg
 			text={title}
 			color="black"
 			marginBottom={10}/>)}
-		<View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', paddingHorizontal: 10, borderWidth: 1, borderColor: colors.grayLight, borderRadius: 10, marginBottom: marginBottom }}>
+		<View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', paddingHorizontal: 10, borderWidth: 1, borderColor: colors.grayLight, borderRadius: 10, marginBottom: marginBottom, backgroundColor: colors[backgroundColor] }}>
 			{
-			styleIcon.iconLeft && 
+			styleIcon.name && 
 			<Ionicons
-				{ ...{styleIcon}} />
+				{...{styleIcon}} />
 			}
 			<TextInput
 				placeholderTextColor={colors.gray}
@@ -26,7 +26,7 @@ export const Input	= ({title, placeholder, onChange, secureTextEntry=false, marg
 						textAlign:'left',
 						paddingHorizontal: 5,
 						paddingVertical: 10,
-						fontSize: 16,
+						fontSize: fontSize,
 						fontFamily: 'poppins',
 						flex: 1,
 					}}

@@ -17,6 +17,12 @@ import { colors } from "./constants";
 const Stack = createStackNavigator()
 const horizontalAnimation = {
 	gestureDirection: 'horizontal',
+	headerBackTitleVisible: false,
+	headerTintColor: 'black',
+	headerStyle: {
+		backgroundColor: colors.grayLightLevel1,
+	},
+	headerShadowVisible: false,
 	cardStyleInterpolator: ({ current, layouts }) => {
 		return {
 			cardStyle: {
@@ -39,10 +45,9 @@ export default App =({ initialRoute })=>{
 		<Stack.Navigator initialRouteName={initialRoute} screenOptions={horizontalAnimation}>
 			<Stack.Screen name="Signin" component={signin} options={{ headerShown: false }} />
 			<Stack.Screen name="Dashboard" component={dashboard} options={{ headerShown: false }} />
-			<Stack.Screen name="MasterData" component={menuMasterData} options={{ headerShown: true, headerTintColor: colors.black, title: Platform.OS === 'ios' ? '' : 'Master Data' }} />
+			<Stack.Screen name="MasterData" component={menuMasterData} options={{ headerShown: true, title: 'Master Data' }} />
 			<Stack.Screen name="HospitalList" component={hospitalList} options={ ({navigation}) => ({
-				headerShown: true, title: Platform.OS === 'ios' ? '' : 'Rumah Sakit',
-				headerTintColor: colors.black,
+				headerShown: true, title: 'Rumah Sakit',
 				headerRight: () => (
 					<Button icon='add-outline' iconColor="black" onPress={()=> navigation.navigate('Dashboard')} />
 				)

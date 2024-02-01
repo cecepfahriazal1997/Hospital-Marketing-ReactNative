@@ -31,11 +31,11 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
     borderColor: colors.grayLight,
     padding: 16,
-    elevation: 1,
+    elevation: 2,
     shadowColor: 'rgba(0,0,0, .4)', // IOS
     shadowOffset: { height: 1, width: 1 }, // IOS
-    shadowOpacity: 0.5, // IOS
-    shadowRadius: 1, //IOS
+    shadowOpacity: 0.1, // IOS
+    shadowRadius: 2, //IOS
     gap: 10
   },
   image: {
@@ -60,11 +60,11 @@ const elementItem = ({ item }) => (
   </TouchableOpacity>
 );
 
-const headerItem = () => {
-  <View style={{ backgroundColor: 'red' }}>
-    <Input title="Password" placeholder='Masukan password'></Input>
+const headerItem = () => (
+  <View style={{ flex: 1}}>
+    <Input placeholder='Cari Rumah Sakit' styleIcon={{ name: 'person' }} backgroundColor="grayLightLevel2"></Input>
   </View>
-}
+)
 
 const HospitalList = ({navigation}) => {
   return (
@@ -78,7 +78,7 @@ const HospitalList = ({navigation}) => {
         numColumns={1}
         contentContainerStyle={{ marginTop: 30, marginHorizontal:20 }}
         ListHeaderComponent={headerItem}
-        ListHeaderComponentStyle={{ marginVertical: 30}}
+        ListHeaderComponentStyle={{ marginVertical: 20}}
         />
     </Container>
   );
