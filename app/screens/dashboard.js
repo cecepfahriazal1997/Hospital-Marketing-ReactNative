@@ -16,10 +16,10 @@ const styles = {
     borderTopWidth: 0
   },
   tabBarItemStyle: {
-    margin: 8,
+    margin: 10,
   },
   tabBarLabelStyle: {
-    fontSize: 14,
+    fontSize: 12,
     fontFamily: 'poppins'
   },
   headerShown: false,
