@@ -5,7 +5,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { navigationRef } from './helpers/root-navigation';
 
 // import all screens
-import main from './screens/main';
 import signin from './screens/authentication/signin';
 import dashboard from "./screens/dashboard";
 
@@ -33,7 +32,6 @@ export default App =({ initialRoute })=>{
 	return (
 	<NavigationContainer ref={navigationRef}>
 		<Stack.Navigator initialRouteName={initialRoute} screenOptions={horizontalAnimation}>
-			<Stack.Screen name="Main" component={main} />
 			<Stack.Screen name="Signin" component={signin} />
 			<Stack.Screen name="Dashboard" component={dashboard} />
 		</Stack.Navigator>
