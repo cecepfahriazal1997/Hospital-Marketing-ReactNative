@@ -8,7 +8,7 @@ export const Input	= ({title, placeholder, onChange, secureTextEntry=false, marg
 	
 	return <>
         {title && (<Label
-			size={16}
+			size={14}
 			font="poppins"
 			text={title}
 			color="black"
