@@ -77,7 +77,7 @@ const HospitalList = ({navigation}) => {
   const headerItem = () => (
     <View style={{ flexDirection:'row', flex: 1, gap: 10}}>
       <Input placeholder='Cari Rumah Sakit' styleIcon={{ name: 'search', color: colors.gray, size: 16 }} backgroundColor="grayLightLevel2"></Input>
-      <Button icon='list-outline' color='grayLightLevel2' iconColor='gray' style={{ height: 50}} />
+      <Button icon='options-outline' color='grayLightLevel2' iconColor='gray' style={{ height: 50}} />
     </View>
   )
 
