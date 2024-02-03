@@ -13,6 +13,8 @@ import hospitalList from "./screens/master-data/hospital/list";
 import hospitalForm from "./screens/master-data/hospital/form";
 import doctorList from "./screens/master-data/doctor/list";
 import doctorForm from "./screens/master-data/doctor/form";
+import patientList from "./screens/master-data/patient/list";
+import patientForm from "./screens/master-data/patient/form";
 
 import { Button } from "./components";
 import { colors } from "./constants";
@@ -69,6 +71,18 @@ export default App =({ initialRoute })=>{
 			})} />
 			<Stack.Screen name="DoctorForm" component={doctorForm} options={ ({navigation}) => ({
 				headerShown: true, title: 'Form Dokter',
+				headerStyle: {
+					backgroundColor: colors.white
+				},
+			})} />
+			<Stack.Screen name="PatientList" component={patientList} options={ ({navigation}) => ({
+				headerShown: true, title: 'Pasien',
+				headerRight: () => (
+					<Button icon='add-outline' iconColor="black" onPress={()=> navigation.navigate('PatientForm')} />
+				)
+			})} />
+			<Stack.Screen name="PatientForm" component={patientForm} options={ ({navigation}) => ({
+				headerShown: true, title: 'Form Pasien',
 				headerStyle: {
 					backgroundColor: colors.white
 				},
