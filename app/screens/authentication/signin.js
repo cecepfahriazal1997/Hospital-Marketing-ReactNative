@@ -1,7 +1,6 @@
 import { ScrollView, View, StatusBar } from 'react-native';
 import { Container, Button } from '../../components';
-import { Label } from '../../components/label';
-import { Input } from '../../components/input';
+import { Label, Input } from '../../components';
 import colors from '../../constants/colors';
 
 export default function Signin({navigation}) {

@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import { View, Modal, StyleSheet, TouchableOpacity } from 'react-native';
 import colors from '../constants/colors';
-import { Button, Label } from '../components'
+import { Button } from './button'
+import { Label } from './label'
 
 const styles = StyleSheet.create({
 	backdropModal: {

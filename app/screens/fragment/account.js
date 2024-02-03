@@ -1,7 +1,6 @@
-import { View, StatusBar, Image, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
-import { Container } from '../../components';
+import { View, Image, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
+import { Container, Label } from '../../components';
 import { colors, images } from '../../constants';
-import { Label } from '../../components/label';
 import { Ionicons } from '@expo/vector-icons';
 
 const menuItem = [
