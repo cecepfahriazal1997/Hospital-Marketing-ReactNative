@@ -9,6 +9,7 @@ export default {
     light: '#FBF9F1',
     white: '#FFFFFF',
     black: '#000000',
+    blackTransparent: 'rgba(0, 0, 0, 0.5)',
     grayLight: '#F0F0F0',
     grayLightLevel1: '#F8F8F8',
     grayLightLevel2: '#e3e3e3',
