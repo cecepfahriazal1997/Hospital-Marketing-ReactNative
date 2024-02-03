@@ -63,7 +63,7 @@ const MenuMasterData = ({navigation}) => {
   const elementItem = ({ item, index }) => (
     <TouchableOpacity activeOpacity={0.8} onPress={() => onClickItem(index)} style={{ ...styles.button }}>
       <View style={{ flex: 0.5, alignItems: 'center', justifyContent: 'center'}}>
-          <Image source={item.icon} style={styles.image} />
+          <Image source={item.icon} style={styles.image} resizeMode='center' />
       </View>
       <View style={{ flex: 2, justifyContent: 'center' }}>
         <Label text={ item.title } size={14}></Label>

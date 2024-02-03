@@ -5,7 +5,7 @@ import colors from './../constants/colors';
 import { Label } from './label';
 import { Ionicons } from '@expo/vector-icons';
 
-export const Input	= ({title, placeholder, onChange, secureTextEntry=false, marginBottom=0, backgroundColor='grayLightLevel1', fontSize=14, styleIcon={ name:null, color: 'black', size: 25 }})=>{
+export const Input	= ({title, placeholder, onChange, secureTextEntry=false, marginBottom=0, backgroundColor='grayLightLevel1', fontSize=14, numberOfLines=1, styleIcon={ name:null, color: 'black', size: 25 }})=>{
 	return <>
         {title && (<Label
 			size={14}
@@ -21,8 +21,11 @@ export const Input	= ({title, placeholder, onChange, secureTextEntry=false, marg
 			<TextInput
 				placeholderTextColor={colors.gray}
 				onChangeText={onChange}
+				multiline={numberOfLines > 1}
+				numberOfLines={numberOfLines}
 				style={{
 						textAlign:'left',
+						textAlignVertical: (numberOfLines > 1) ? 'top' : 'center',
 						paddingHorizontal: 5,
 						paddingVertical: 10,
 						fontSize: fontSize,

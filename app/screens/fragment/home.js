@@ -54,6 +54,7 @@ const Home = ({navigation}) => {
       <Image
         style={{ width: 70, height: 70, resizeMode: 'center' }}
         source={ item.image }
+        resizeMode='center'
       />
       <Label text={ item.title } size={12} style={{ fontWeight: '600' }}></Label>
     </TouchableOpacity>

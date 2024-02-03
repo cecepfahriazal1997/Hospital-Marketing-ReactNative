@@ -13,5 +13,6 @@ export default {
     grayLight: '#F0F0F0',
     grayLightLevel1: '#F8F8F8',
     grayLightLevel2: '#e3e3e3',
+    graySmooth: '#f7f5f5',
     gray: '#7F8487'
 }

@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import colors from './../constants/colors';
 import { Label } from './label';
 
-export const Button	= ({text, textColor, color, onPress, icon=null, iconSize=25, iconColor='white', disabled=false, borderRadius=10, padding= 10, style})=>{
+export const Button	= ({text, textColor, fontSize=16, color, onPress, icon=null, iconSize=25, iconColor='white', disabled=false, borderRadius=10, padding= 10, style})=>{
 	return <View style={{ }}>
 		<TouchableOpacity onPress={onPress} disabled={disabled} activeOpacity={0.6}>
 			<View 
@@ -28,7 +28,7 @@ export const Button	= ({text, textColor, color, onPress, icon=null, iconSize=25,
 					align='center'
 					font='poppins'
 					color={textColor}
-					size={18}
+					size={fontSize}
 					text={text}/>
 			</View>
 		</TouchableOpacity>

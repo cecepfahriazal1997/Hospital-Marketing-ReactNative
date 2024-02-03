@@ -10,6 +10,7 @@ import signin from './screens/authentication/signin';
 import dashboard from "./screens/dashboard";
 import menuMasterData from "./screens/master-data/menu";
 import hospitalList from "./screens/master-data/hospital/list";
+import hospitalForm from "./screens/master-data/hospital/form";
 
 import { Button } from "./components";
 import { colors } from "./constants";
@@ -49,8 +50,14 @@ export default App =({ initialRoute })=>{
 			<Stack.Screen name="HospitalList" component={hospitalList} options={ ({navigation}) => ({
 				headerShown: true, title: 'Rumah Sakit',
 				headerRight: () => (
-					<Button icon='add-outline' iconColor="black" onPress={()=> navigation.navigate('Dashboard')} />
+					<Button icon='add-outline' iconColor="black" onPress={()=> navigation.navigate('HospitalForm')} />
 				)
+			})} />
+			<Stack.Screen name="HospitalForm" component={hospitalForm} options={ ({navigation}) => ({
+				headerShown: true, title: 'Form Rumah Sakit',
+				headerStyle: {
+					backgroundColor: colors.white
+				},
 			})} />
 		</Stack.Navigator>
 	</NavigationContainer>

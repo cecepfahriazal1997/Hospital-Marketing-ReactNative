@@ -10,4 +10,5 @@ export default {
     icon_doctor: require('../../assets/images/icons/icon-doctor.png'),
     icon_hospital: require('../../assets/images/icons/icon-hospital.png'),
     icon_patient: require('../../assets/images/icons/icon-patient.png'),
+    no_image: require('../../assets/images/no-photo.png'),
 }
