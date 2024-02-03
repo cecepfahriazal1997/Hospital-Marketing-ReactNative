@@ -54,6 +54,9 @@ const Home = ({navigation}) => {
       case 0:
         navigation.navigate('MasterData')
         break;
+      case 1:
+        navigation.navigate('Input')
+        break;
     }
   }
   

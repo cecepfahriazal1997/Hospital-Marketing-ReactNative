@@ -11,4 +11,11 @@ export default {
     icon_hospital: require('../../assets/images/icons/icon-hospital.png'),
     icon_patient: require('../../assets/images/icons/icon-patient.png'),
     no_image: require('../../assets/images/no-photo.png'),
+    component: require('../../assets/images/icons/component.png'),
+    point: require('../../assets/images/icons/point.png'),
+    medical_record: require('../../assets/images/icons/medical-record.png'),
+    accounting: require('../../assets/images/icons/accounting.png'),
+    consideration: require('../../assets/images/icons/consideration.png'),
+    research: require('../../assets/images/icons/research.png'),
+    marketing: require('../../assets/images/icons/marketing.png'),
 }

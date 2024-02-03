@@ -8,13 +8,15 @@ import { navigationRef } from './helpers/root-navigation';
 // import all screens
 import signin from './screens/authentication/signin';
 import dashboard from "./screens/dashboard";
-import menuMasterData from "./screens/master-data/menu";
+import menuMasterData from "./screens/master-data";
 import hospitalList from "./screens/master-data/hospital/list";
 import hospitalForm from "./screens/master-data/hospital/form";
 import doctorList from "./screens/master-data/doctor/list";
 import doctorForm from "./screens/master-data/doctor/form";
 import patientList from "./screens/master-data/patient/list";
 import patientForm from "./screens/master-data/patient/form";
+import menuInput from "./screens/input";
+import componentItem from "./screens/input/component-item";
 
 import { Button } from "./components";
 import { colors } from "./constants";
@@ -87,6 +89,8 @@ export default App =({ initialRoute })=>{
 					backgroundColor: colors.white
 				},
 			})} />
+			<Stack.Screen name="Input" component={menuInput} options={{ headerShown: true, title: 'Masukan' }} />
+			<Stack.Screen name="ComponentItem" component={componentItem} options={{ headerShown: true, title: 'Komponen Pemasaran' }} />
 		</Stack.Navigator>
 	</NavigationContainer>
 	)
