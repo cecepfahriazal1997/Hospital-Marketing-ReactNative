@@ -54,6 +54,9 @@ const MenuMasterData = ({navigation}) => {
       case 0:
         navigation.navigate('HospitalList');
         break;
+      case 1:
+        navigation.navigate('DoctorList');
+        break;
     
       default:
         break;
