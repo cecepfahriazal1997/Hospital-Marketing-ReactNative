@@ -67,7 +67,7 @@ const PatientList = ({navigation}) => {
   const elementItem = ({ item }) => (
     <TouchableOpacity activeOpacity={0.8} onPress={() => setModalVisible(true)} style={{ ...styles.button }}>
       <View style={{ alignItems: 'center', justifyContent: 'center'}}>
-          <Image source={item.image} style={styles.image} resizeMode='center' />
+          <Image source={item.image} style={styles.image} resizeMode={"center"} />
       </View>
       <View style={{ justifyContent: 'center' }}>
         <Label text={ item.title } size={14}></Label>

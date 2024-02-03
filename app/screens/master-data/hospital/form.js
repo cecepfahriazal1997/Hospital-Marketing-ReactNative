@@ -32,8 +32,8 @@ export default function HospitalForm({navigation}) {
         <View style={{padding: 30, flex: 1, justifyContent: 'center'}}>
           <View style={{alignItems: 'center', marginBottom: 60}}>
             <View style={{ padding: 10, backgroundColor: colors.grayLight, width: 150, alignItems: 'center', alignSelf: 'center', borderRadius: 20, marginBottom: 10 }}>
-              {!image && <Image source={images.no_image} tintColor={colors.gray} style={{ width: '100%', height: 100 }} resizeMode='contain' />}
-              {image && <Image source={{ uri: image }} style={{ width: '100%', height: 100 }} resizeMode='contain' />}
+              {!image && <Image source={images.no_image} tintColor={colors.gray} style={{ width: '100%', height: 100 }} resizeMode={"contain"} />}
+              {image && <Image source={{ uri: image }} style={{ width: '100%', height: 100 }} resizeMode={"contain"} />}
             </View>
             <Button color='primary' text='Choose File' textColor='white' fontSize={14} style={{width: 150}} onPress={pickImage} />
           </View>

@@ -80,8 +80,9 @@ const Home = ({navigation}) => {
             <Label text="Selamat datang di Sistem Informasi Pemasaran Rumah Sakit Berbasis Rekam Medis" size={14} style={{marginTop: 10}}></Label>
           </View>
           <Image
-            style={{ flex: 1, width: 'auto', height: 'auto', resizeMode: 'center' }}
+            style={{ flex: 1, width: 'auto', height: 'auto', resizeMode: 'contain' }}
             source={ images.banner }
+            resizeMode={"contain"}
           />
         </View>
     </LinearGradient>
