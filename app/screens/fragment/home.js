@@ -60,9 +60,9 @@ const Home = ({navigation}) => {
   const elementMenu = ({ item, index }) => (
     <TouchableOpacity activeOpacity={0.8} onPress={() => goToMenu(index)} style={{ ...styles.button }}>
       <Image
-        style={{ width: 70, height: 70, resizeMode: 'center' }}
+        style={{ width: 70, height: 70, resizeMode: 'contain' }}
         source={ item.image }
-        resizeMode='center'
+        resizeMode={"contain"}
       />
       <Label text={ item.title } size={12} style={{ fontWeight: '600' }}></Label>
     </TouchableOpacity>
