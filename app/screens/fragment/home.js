@@ -48,9 +48,17 @@ const Home = ({navigation}) => {
       shadowRadius: 2, //IOS
     }
   });
+
+  const goToMenu = (index) => {
+    switch(index) {
+      case 0:
+        navigation.navigate('MasterData')
+        break;
+    }
+  }
   
-  const elementMenu = ({ item }) => (
-    <TouchableOpacity activeOpacity={0.8} onPress={() => navigation.navigate('MasterData')} style={{ ...styles.button }}>
+  const elementMenu = ({ item, index }) => (
+    <TouchableOpacity activeOpacity={0.8} onPress={() => goToMenu(index)} style={{ ...styles.button }}>
       <Image
         style={{ width: 70, height: 70, resizeMode: 'center' }}
         source={ item.image }
