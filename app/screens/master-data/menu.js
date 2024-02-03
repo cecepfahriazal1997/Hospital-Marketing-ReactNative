@@ -1,6 +1,6 @@
 import { View, StatusBar, Image, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import { Container, Label } from '../../components';
-import { colors, images } from '../../constants';
+import { colors, images, styles } from '../../constants';
 
 const MenuMasterData = ({navigation}) => {
   const menuItem = [
@@ -20,29 +20,6 @@ const MenuMasterData = ({navigation}) => {
       description: ''
     }
   ];
-  
-  const styles = StyleSheet.create({
-    button: {
-      marginVertical: 4,
-      flex:1,
-      flexDirection: 'row',
-      backgroundColor: colors.white,
-      borderRadius: 10,
-      borderWidth: 0.5,
-      borderColor: colors.grayLight,
-      padding: 16,
-      elevation: 1,
-      shadowColor: 'rgba(0,0,0, .4)', // IOS
-      shadowOffset: { height: 1, width: 1 }, // IOS
-      shadowOpacity: 0.5, // IOS
-      shadowRadius: 1, //IOS
-      gap: 10
-    },
-    image: {
-      width: 32,
-      height: 32,
-    }
-  });
 
   const onClickItem = (index) => {
     switch (index) {
@@ -62,9 +39,9 @@ const MenuMasterData = ({navigation}) => {
   }
   
   const elementItem = ({ item, index }) => (
-    <TouchableOpacity activeOpacity={0.8} onPress={() => onClickItem(index)} style={{ ...styles.button }}>
+    <TouchableOpacity activeOpacity={0.8} onPress={() => onClickItem(index)} style={{ ...styles.card }}>
       <View style={{ alignItems: 'center', width: 50, height: 50, justifyContent: 'center', borderRadius: 10, overflow: "hidden", backgroundColor: colors.primaryTransparent}}>
-          <Image source={item.icon} style={styles.image} resizeMode={"contain"} />
+          <Image source={item.icon} style={ styles.imageMenu } resizeMode={"contain"} />
       </View>
       <View style={{ justifyContent: 'center' }}>
         <Label text={ item.title } size={14}></Label>

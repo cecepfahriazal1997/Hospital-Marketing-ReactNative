@@ -2,30 +2,7 @@ import React, {useState} from 'react';
 import { View, StatusBar, Image, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { Button, Container, Input, Label, Modals } from '../../../components';
-import { colors, images } from '../../../constants';
-
-const styles = StyleSheet.create({
-  button: {
-    marginVertical: 4,
-    flex:1,
-    flexDirection: 'row',
-    backgroundColor: colors.white,
-    borderRadius: 10,
-    borderWidth: 0.5,
-    borderColor: colors.grayLight,
-    padding: 16,
-    elevation: 2,
-    shadowColor: 'rgba(0,0,0, .4)', // IOS
-    shadowOffset: { height: 1, width: 1 }, // IOS
-    shadowOpacity: 0.1, // IOS
-    shadowRadius: 2, //IOS
-    gap: 15
-  },
-  image: {
-    width: 32,
-    height: 32,
-  }
-});
+import { colors, images, styles } from '../../../constants';
 
 const HospitalList = ({navigation}) => {
 	const [modalVisible, setModalVisible] = useState(false);
@@ -60,9 +37,9 @@ const HospitalList = ({navigation}) => {
   ];
   
   const elementItem = ({ item }) => (
-    <TouchableOpacity activeOpacity={0.8} onPress={() => setModalVisible(true)} style={{ ...styles.button }}>
-      <View style={{ alignItems: 'center', width: 50, height: 50, justifyContent: 'center', borderRadius: 10, overflow: "hidden", backgroundColor: colors.primaryTransparent}}>
-          <Image source={item.image} style={styles.image} resizeMode={"contain"} />
+    <TouchableOpacity activeOpacity={0.8} onPress={() => setModalVisible(true)} style={{ ...styles.card }}>
+      <View style={ styles.badgeImageMenu }>
+          <Image source={item.image} style={styles.imageMenu} resizeMode={"contain"} />
       </View>
       <View style={{ justifyContent: 'center' }}>
         <Label text={ item.title } size={14}></Label>
