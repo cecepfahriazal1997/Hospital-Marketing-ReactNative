@@ -39,13 +39,8 @@ const MenuMasterData = ({navigation}) => {
       gap: 10
     },
     image: {
-      width: 50,
-      height: 50,
-      borderRadius: 10,
-      overflow: "hidden",
-      backgroundColor: colors.primaryTransparent,
-      paddingTop: 50,
-      resizeMode: 'center'
+      width: 32,
+      height: 32,
     }
   });
 
@@ -68,10 +63,10 @@ const MenuMasterData = ({navigation}) => {
   
   const elementItem = ({ item, index }) => (
     <TouchableOpacity activeOpacity={0.8} onPress={() => onClickItem(index)} style={{ ...styles.button }}>
-      <View style={{ flex: 0.5, alignItems: 'center', justifyContent: 'center'}}>
-          <Image source={item.icon} style={styles.image} resizeMode={"center"} />
+      <View style={{ alignItems: 'center', width: 50, height: 50, justifyContent: 'center', borderRadius: 10, overflow: "hidden", backgroundColor: colors.primaryTransparent}}>
+          <Image source={item.icon} style={styles.image} resizeMode={"contain"} />
       </View>
-      <View style={{ flex: 2, justifyContent: 'center' }}>
+      <View style={{ justifyContent: 'center' }}>
         <Label text={ item.title } size={14}></Label>
       </View>
     </TouchableOpacity>

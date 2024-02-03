@@ -22,13 +22,8 @@ const styles = StyleSheet.create({
     gap: 15
   },
   image: {
-    width: 50,
-    height: 50,
-    borderRadius: 10,
-    overflow: "hidden",
-    backgroundColor: colors.primaryTransparent,
-    paddingTop: 50,
-    resizeMode: 'center'
+    width: 32,
+    height: 32
   }
 });
 
@@ -69,8 +64,8 @@ const DoctorList = ({navigation}) => {
   
   const elementItem = ({ item }) => (
     <TouchableOpacity activeOpacity={0.8} onPress={() => setModalVisible(true)} style={{ ...styles.button }}>
-      <View style={{ alignItems: 'center', justifyContent: 'center'}}>
-          <Image source={item.image} style={styles.image} resizeMode={"center"} />
+      <View style={{ alignItems: 'center', width: 50, height: 50, justifyContent: 'center', borderRadius: 10, overflow: "hidden", backgroundColor: colors.primaryTransparent}}>
+          <Image source={item.image} style={styles.image} resizeMode={"contain"} />
       </View>
       <View style={{ justifyContent: 'center' }}>
         <Label text={ item.title } size={14}></Label>

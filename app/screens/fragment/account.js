@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     backgroundColor: colors.primaryTransparent,
     paddingTop: 50,
-    resizeMode: 'center'
+    resizeMode: 'contain'
   }
 });
 
@@ -65,7 +65,7 @@ const elementMenu = ({ item }) => (
 
 const headerMenu = () => (
   <View style={{ flex: 1, alignItems: 'center' }}>
-    <Image source={images.doctor} style={ styles.image } resizeMode={"center"} />
+    <Image source={images.doctor} style={ styles.image } resizeMode={"contain"} />
     <Label text="Dr. dr. H. Boy Subiros Sabarguna, MARS" fontFamily='poppins-extra-bold' size={16} style={{ alignItems: 'center', marginTop: 20, textAlign: 'center' }} />
     <Label text="Doctor" size={16} style={{ alignItems: 'center'}} />
   </View>
