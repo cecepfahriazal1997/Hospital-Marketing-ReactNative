@@ -25,6 +25,8 @@ import marketingComparisonList from "./screens/input/marketing-comparison/list";
 import marketingComparisonForm from "./screens/input/marketing-comparison/form";
 import marketingResearchList from "./screens/input/marketing-research/list";
 import marketingResearchForm from "./screens/input/marketing-research/form";
+import marketingAnalyticList from "./screens/input/marketing-analytic/list";
+import marketingAnalyticForm from "./screens/input/marketing-analytic/form";
 
 import { Button } from "./components";
 import { colors } from "./constants";
@@ -141,8 +143,20 @@ export default App =({ initialRoute })=>{
 					<Button icon='add-outline' iconColor="black" onPress={()=> navigation.navigate('MarketingResarchForm')} />
 				)
 			})} />
-			<Stack.Screen name="MarketingResarchForm" component={marketingComparisonForm} options={ ({navigation}) => ({
+			<Stack.Screen name="MarketingResarchForm" component={marketingResearchForm} options={ ({navigation}) => ({
 				headerShown: true, title: 'Form Riset Pemasaran',
+				headerStyle: {
+					backgroundColor: colors.white
+				},
+			})} />
+			<Stack.Screen name="MarketingAnalyticList" component={marketingAnalyticList} options={ ({navigation}) => ({
+				headerShown: true, title: 'Pemasaran Analitik',
+				headerRight: () => (
+					<Button icon='add-outline' iconColor="black" onPress={()=> navigation.navigate('MarketingAnalyticForm')} />
+				)
+			})} />
+			<Stack.Screen name="MarketingAnalyticForm" component={marketingAnalyticForm} options={ ({navigation}) => ({
+				headerShown: true, title: 'Form Pemasaran Analitik',
 				headerStyle: {
 					backgroundColor: colors.white
 				},
