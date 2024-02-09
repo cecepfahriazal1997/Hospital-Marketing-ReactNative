@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 import colors from './colors';
 
 export default StyleSheet.create({
@@ -34,6 +34,9 @@ export default StyleSheet.create({
     select: {
       width: '100%',
       backgroundColor: 'transparent',
+      borderRadius: 10,
+      borderWidth: 1,
+      borderColor: colors.grayLight
     },
     selectText: {
       fontSize: 12,
@@ -41,16 +44,22 @@ export default StyleSheet.create({
       fontFamily: 'poppins'
     },
     selectDropdown: {
-      marginTop: -32,
+      marginTop: Platform.OS == 'android' ? -32 : -10,
       borderBottomLeftRadius: 10,
       borderBottomRightRadius: 10,
-      borderWidth: 0,
+      backgroundColor: colors.white,
       shadowColor: colors.blackTransparent,
-      shadowRadius: 0.1
+      shadowRadius: 0.5,
+      borderWidth: 1,
+      borderColor: colors.grayLight,
+      shadowOffset: {
+        height: 0.5,
+        width: 0.5
+      }
     },
     selectDropdownRow: {
       width: '100%',
-      backgroundColor: colors.white,
+      backgroundColor: 'transparent',
       borderBottomColor: colors.grayLight,
     },
     selectDropdownText: {
