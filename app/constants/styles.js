@@ -14,7 +14,7 @@ export default StyleSheet.create({
       elevation: 1,
       shadowColor: 'rgba(0,0,0, .4)', // IOS
       shadowOffset: { height: 1, width: 1 }, // IOS
-      shadowOpacity: 0.5, // IOS
+      shadowOpacity: 0.1, // IOS
       shadowRadius: 1, //IOS
       gap: 10
     },
