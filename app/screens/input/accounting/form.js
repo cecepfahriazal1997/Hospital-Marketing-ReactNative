@@ -37,7 +37,7 @@ export default function AccountingForm({navigation}) {
               text="Simpan"
               onPress={()=>{
                 Alert.alert('Berhasil', 'Data berhasil disimpan!');
-                navigation.navigate('MedicalRecordList');
+                navigation.navigate('AccountingList');
               }}/>
           </View>
         </View>
