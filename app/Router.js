@@ -23,6 +23,8 @@ import accountingList from "./screens/input/accounting/list";
 import accountingForm from "./screens/input/accounting/form";
 import marketingComparisonList from "./screens/input/marketing-comparison/list";
 import marketingComparisonForm from "./screens/input/marketing-comparison/form";
+import marketingResearchList from "./screens/input/marketing-research/list";
+import marketingResearchForm from "./screens/input/marketing-research/form";
 
 import { Button } from "./components";
 import { colors } from "./constants";
@@ -129,6 +131,18 @@ export default App =({ initialRoute })=>{
 			})} />
 			<Stack.Screen name="MarketingComparisonForm" component={marketingComparisonForm} options={ ({navigation}) => ({
 				headerShown: true, title: 'Form Perbandingan Pemasaran',
+				headerStyle: {
+					backgroundColor: colors.white
+				},
+			})} />
+			<Stack.Screen name="MarketingResearchList" component={marketingResearchList} options={ ({navigation}) => ({
+				headerShown: true, title: 'Riset Pemasaran',
+				headerRight: () => (
+					<Button icon='add-outline' iconColor="black" onPress={()=> navigation.navigate('MarketingResarchForm')} />
+				)
+			})} />
+			<Stack.Screen name="MarketingResarchForm" component={marketingComparisonForm} options={ ({navigation}) => ({
+				headerShown: true, title: 'Form Riset Pemasaran',
 				headerStyle: {
 					backgroundColor: colors.white
 				},

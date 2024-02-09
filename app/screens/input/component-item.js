@@ -37,6 +37,9 @@ const ComponentItem = ({navigation}) => {
       case 2:
         navigation.navigate('MarketingComparisonList');
         break;
+      case 3:
+        navigation.navigate('MarketingResearchList');
+        break;
     
       default:
         break;
