@@ -17,6 +17,8 @@ import patientList from "./screens/master-data/patient/list";
 import patientForm from "./screens/master-data/patient/form";
 import menuInput from "./screens/input";
 import componentItem from "./screens/input/component-item";
+import medicalRecordList from "./screens/input/medical-record/list";
+import medicalRecordForm from "./screens/input/medical-record/form";
 
 import { Button } from "./components";
 import { colors } from "./constants";
@@ -91,6 +93,18 @@ export default App =({ initialRoute })=>{
 			})} />
 			<Stack.Screen name="Input" component={menuInput} options={{ headerShown: true, title: 'Masukan' }} />
 			<Stack.Screen name="ComponentItem" component={componentItem} options={{ headerShown: true, title: 'Komponen Pemasaran' }} />
+			<Stack.Screen name="MedicalRecordList" component={medicalRecordList} options={ ({navigation}) => ({
+				headerShown: true, title: 'Rekam Medis',
+				headerRight: () => (
+					<Button icon='add-outline' iconColor="black" onPress={()=> navigation.navigate('MedicalRecordForm')} />
+				)
+			})} />
+			<Stack.Screen name="MedicalRecordForm" component={medicalRecordForm} options={ ({navigation}) => ({
+				headerShown: true, title: 'Form Rekam Medis',
+				headerStyle: {
+					backgroundColor: colors.white
+				},
+			})} />
 		</Stack.Navigator>
 	</NavigationContainer>
 	)

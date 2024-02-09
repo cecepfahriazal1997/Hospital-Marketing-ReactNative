@@ -29,7 +29,7 @@ const ComponentItem = ({navigation}) => {
   const onClickItem = (index) => {
     switch (index) {
       case 0:
-        navigation.navigate('HospitalList');
+        navigation.navigate('MedicalRecordList');
         break;
       case 1:
         navigation.navigate('DoctorList');

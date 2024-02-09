@@ -30,5 +30,33 @@ export default StyleSheet.create({
         borderRadius: 10,
         overflow: "hidden",
         backgroundColor: colors.primaryTransparent
+    },
+    select: {
+      width: '100%',
+      backgroundColor: 'transparent',
+    },
+    selectText: {
+      fontSize: 12,
+      textAlign: 'left',
+      fontFamily: 'poppins'
+    },
+    selectDropdown: {
+      marginTop: -32,
+      borderBottomLeftRadius: 10,
+      borderBottomRightRadius: 10,
+      borderWidth: 0,
+      shadowColor: colors.blackTransparent,
+      shadowRadius: 0.1
+    },
+    selectDropdownRow: {
+      width: '100%',
+      backgroundColor: colors.white,
+      borderBottomColor: colors.grayLight,
+    },
+    selectDropdownText: {
+      fontSize: 12,
+      textAlign: 'left',
+      color: colors.black,
+      fontFamily: 'poppins'
     }
 });
