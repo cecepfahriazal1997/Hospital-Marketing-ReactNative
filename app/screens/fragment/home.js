@@ -57,6 +57,9 @@ const Home = ({navigation}) => {
       case 1:
         navigation.navigate('Input')
         break;
+      case 2:
+        navigation.navigate('Process')
+        break;
     }
   }
   

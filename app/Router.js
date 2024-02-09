@@ -8,6 +8,7 @@ import { navigationRef } from './helpers/root-navigation';
 // import all screens
 import signin from './screens/authentication/signin';
 import dashboard from "./screens/dashboard";
+
 import menuMasterData from "./screens/master-data";
 import hospitalList from "./screens/master-data/hospital/list";
 import hospitalForm from "./screens/master-data/hospital/form";
@@ -15,6 +16,7 @@ import doctorList from "./screens/master-data/doctor/list";
 import doctorForm from "./screens/master-data/doctor/form";
 import patientList from "./screens/master-data/patient/list";
 import patientForm from "./screens/master-data/patient/form";
+
 import menuInput from "./screens/input";
 import componentItem from "./screens/input/component-item";
 import medicalRecordList from "./screens/input/medical-record/list";
@@ -27,6 +29,8 @@ import marketingResearchList from "./screens/input/marketing-research/list";
 import marketingResearchForm from "./screens/input/marketing-research/form";
 import marketingAnalyticList from "./screens/input/marketing-analytic/list";
 import marketingAnalyticForm from "./screens/input/marketing-analytic/form";
+
+import process from "./screens/process";
 
 import { Button } from "./components";
 import { colors } from "./constants";
@@ -161,6 +165,7 @@ export default App =({ initialRoute })=>{
 					backgroundColor: colors.white
 				},
 			})} />
+			<Stack.Screen name="Process" component={process} options={{ headerShown: true, title: 'Proses' }} />
 		</Stack.Navigator>
 	</NavigationContainer>
 	)

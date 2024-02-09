@@ -18,4 +18,8 @@ export default {
     consideration: require('../../assets/images/icons/consideration.png'),
     research: require('../../assets/images/icons/research.png'),
     marketing: require('../../assets/images/icons/marketing.png'),
+    idea: require('../../assets/images/icons/idea.png'),
+    create_idea: require('../../assets/images/icons/create-idea.png'),
+    analyze_indicator: require('../../assets/images/icons/analyze-indicator.png'),
+    analyze_information: require('../../assets/images/icons/analyze-information.png'),
 }
