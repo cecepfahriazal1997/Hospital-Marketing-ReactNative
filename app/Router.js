@@ -19,6 +19,8 @@ import menuInput from "./screens/input";
 import componentItem from "./screens/input/component-item";
 import medicalRecordList from "./screens/input/medical-record/list";
 import medicalRecordForm from "./screens/input/medical-record/form";
+import accountingList from "./screens/input/accounting/list";
+import accountingForm from "./screens/input/accounting/form";
 
 import { Button } from "./components";
 import { colors } from "./constants";
@@ -101,6 +103,18 @@ export default App =({ initialRoute })=>{
 			})} />
 			<Stack.Screen name="MedicalRecordForm" component={medicalRecordForm} options={ ({navigation}) => ({
 				headerShown: true, title: 'Form Rekam Medis',
+				headerStyle: {
+					backgroundColor: colors.white
+				},
+			})} />
+			<Stack.Screen name="AccountingList" component={accountingList} options={ ({navigation}) => ({
+				headerShown: true, title: 'Akuntansi Manajemen',
+				headerRight: () => (
+					<Button icon='add-outline' iconColor="black" onPress={()=> navigation.navigate('AccountingForm')} />
+				)
+			})} />
+			<Stack.Screen name="AccountingForm" component={accountingForm} options={ ({navigation}) => ({
+				headerShown: true, title: 'Form Akuntansi Manajemen',
 				headerStyle: {
 					backgroundColor: colors.white
 				},

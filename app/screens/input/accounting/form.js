@@ -1,7 +1,7 @@
 import { ScrollView, View, StatusBar, Alert } from 'react-native';
 import { Container, Button, Select } from '../../../components';
 
-export default function MedicalRecordForm({navigation}) {
+export default function AccountingForm({navigation}) {
   const data = ['Option 1', 'Option 2'];
 
   return (

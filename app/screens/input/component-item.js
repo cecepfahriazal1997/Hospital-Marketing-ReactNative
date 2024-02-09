@@ -32,7 +32,7 @@ const ComponentItem = ({navigation}) => {
         navigation.navigate('MedicalRecordList');
         break;
       case 1:
-        navigation.navigate('DoctorList');
+        navigation.navigate('AccountingList');
         break;
     
       default:
