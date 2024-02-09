@@ -1,6 +1,6 @@
 import { View, Image, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import { Container, Label } from '../../components';
-import { colors, images } from '../../constants';
+import { colors, images, styles } from '../../constants';
 import { Ionicons } from '@expo/vector-icons';
 
 const menuItem = [
@@ -21,36 +21,8 @@ const menuItem = [
   }
 ];
 
-const styles = StyleSheet.create({
-  button: {
-    marginVertical: 4,
-    flex:1,
-    flexDirection: 'row',
-    backgroundColor: colors.white,
-    borderRadius: 10,
-    borderWidth: 0.5,
-    borderColor: colors.grayLight,
-    padding: 16,
-    elevation: 1,
-    shadowColor: 'rgba(0,0,0, .4)', // IOS
-    shadowOffset: { height: 1, width: 1 }, // IOS
-    shadowOpacity: 0.5, // IOS
-    shadowRadius: 1, //IOS
-    gap: 10
-  },
-  image: {
-    width: 100,
-    height: 100,
-    borderRadius: 150 / 2,
-    overflow: "hidden",
-    backgroundColor: colors.primaryTransparent,
-    paddingTop: 50,
-    resizeMode: 'contain'
-  }
-});
-
 const elementMenu = ({ item }) => (
-  <TouchableOpacity activeOpacity={0.8} onPress={() => {}} style={{ ...styles.button }}>
+  <TouchableOpacity activeOpacity={0.8} onPress={() => {}} style={{ ...styles.card }}>
     <View style={{ flex: 0.5, alignItems: 'center', justifyContent: 'center'}}>
       <View style={{ backgroundColor: colors.primaryTransparent, borderRadius: 100, paddingVertical: 9, paddingHorizontal: 10 }}>
         <Ionicons name={item.icon} color={colors.primary} size={20} />
@@ -65,7 +37,7 @@ const elementMenu = ({ item }) => (
 
 const headerMenu = () => (
   <View style={{ flex: 1, alignItems: 'center' }}>
-    <Image source={images.doctor} style={ styles.image } resizeMode={"contain"} />
+    <Image source={images.doctor} style={ styles.imageCircle } resizeMode={"contain"} />
     <Label text="Dr. dr. H. Boy Subiros Sabarguna, MARS" fontFamily='poppins-extra-bold' size={16} style={{ alignItems: 'center', marginTop: 20, textAlign: 'center' }} />
     <Label text="Doctor" size={16} style={{ alignItems: 'center'}} />
   </View>

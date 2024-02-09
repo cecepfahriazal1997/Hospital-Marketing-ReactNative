@@ -18,6 +18,15 @@ export default StyleSheet.create({
       shadowRadius: 1, //IOS
       gap: 10
     },
+    imageCircle: {
+      width: 100,
+      height: 100,
+      borderRadius: 150 / 2,
+      overflow: "hidden",
+      backgroundColor: colors.primaryTransparent,
+      paddingTop: 50,
+      resizeMode: 'contain'
+    },
     imageMenu: {
       width: 32,
       height: 32,
