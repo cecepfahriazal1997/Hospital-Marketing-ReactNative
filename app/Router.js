@@ -21,6 +21,8 @@ import medicalRecordList from "./screens/input/medical-record/list";
 import medicalRecordForm from "./screens/input/medical-record/form";
 import accountingList from "./screens/input/accounting/list";
 import accountingForm from "./screens/input/accounting/form";
+import marketingComparisonList from "./screens/input/marketing-comparison/list";
+import marketingComparisonForm from "./screens/input/marketing-comparison/form";
 
 import { Button } from "./components";
 import { colors } from "./constants";
@@ -115,6 +117,18 @@ export default App =({ initialRoute })=>{
 			})} />
 			<Stack.Screen name="AccountingForm" component={accountingForm} options={ ({navigation}) => ({
 				headerShown: true, title: 'Form Akuntansi Manajemen',
+				headerStyle: {
+					backgroundColor: colors.white
+				},
+			})} />
+			<Stack.Screen name="MarketingComparisonList" component={marketingComparisonList} options={ ({navigation}) => ({
+				headerShown: true, title: 'Perbandingan Pemasaran',
+				headerRight: () => (
+					<Button icon='add-outline' iconColor="black" onPress={()=> navigation.navigate('MarketingComparisonForm')} />
+				)
+			})} />
+			<Stack.Screen name="MarketingComparisonForm" component={marketingComparisonForm} options={ ({navigation}) => ({
+				headerShown: true, title: 'Form Perbandingan Pemasaran',
 				headerStyle: {
 					backgroundColor: colors.white
 				},
