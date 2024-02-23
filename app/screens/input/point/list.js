@@ -1,16 +1,16 @@
 import { View, StatusBar, Image, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
-import { Container, Label } from '../../components';
-import { colors, images, styles } from '../../constants';
+import { Container, Label } from '../../../components';
+import { colors, images, styles } from '../../../constants';
 
 const MenuInput = ({navigation}) => {
   const menuItem = [
     {
-      title: 'Komponen Pemasaran',
-      icon: images.component,
+      title: 'Survei',
+      icon: images.survey,
     },
     {
-      title: 'Pembobotan',
-      icon: images.point,
+      title: 'Simulasi',
+      icon: images.simulation,
     },
   ];
 
@@ -20,7 +20,7 @@ const MenuInput = ({navigation}) => {
         navigation.navigate('ComponentItem');
         break;
       case 1:
-        navigation.navigate('Point');
+        navigation.navigate('DoctorList');
         break;
     
       default:

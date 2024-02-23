@@ -32,6 +32,8 @@ import marketingAnalyticForm from "./screens/input/marketing-analytic/form";
 
 import process from "./screens/process";
 
+import point from "./screens/input/point/list";
+
 import { Button } from "./components";
 import { colors } from "./constants";
 
@@ -166,6 +168,7 @@ export default App =({ initialRoute })=>{
 				},
 			})} />
 			<Stack.Screen name="Process" component={process} options={{ headerShown: true, title: 'Proses' }} />
+			<Stack.Screen name="Point" component={point} options={{ headerShown: true, title: 'Pembobotan' }} />
 		</Stack.Navigator>
 	</NavigationContainer>
 	)

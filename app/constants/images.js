@@ -22,4 +22,6 @@ export default {
     create_idea: require('../../assets/images/icons/create-idea.png'),
     analyze_indicator: require('../../assets/images/icons/analyze-indicator.png'),
     analyze_information: require('../../assets/images/icons/analyze-information.png'),
+    survey: require('../../assets/images/icons/survey.png'),
+    simulation: require('../../assets/images/icons/simulation.png'),
 }
