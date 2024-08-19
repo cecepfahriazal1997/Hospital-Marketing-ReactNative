@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, KeyboardAvoidingView, SafeAreaView } from 'react-native';
+import { View, KeyboardAvoidingView, SafeAreaView, Platform } from 'react-native';
 import colors from '../constants/colors';
 
 

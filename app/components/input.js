@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { TextInput, View } from 'react-native';
+import { TextInput, View, Platform } from 'react-native';
 import colors from './../constants/colors';
 import { Label } from './label';
 import { Ionicons } from '@expo/vector-icons';
